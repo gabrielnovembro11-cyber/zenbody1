@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEN BODY - Personal Trainer Academy</title>
+    <!-- Use Inter font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar styles for a sleeker look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111827;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4B5563;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6B7280;
+        }
+        .loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #EF4444;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-200">
+
+    <!-- Header & Navigation -->
+    <header class="py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 bg-gray-950/90 backdrop-blur-sm z-50">
+        <!-- Cor do logo ajustada para combinar com o novo vermelho do botão -->
+        <div class="text-2xl font-bold text-red-600">ZEN BODY</div>
+        <nav class="hidden md:flex space-x-8">
+            <a href="#about" class="hover:text-red-500 transition-colors duration-300">About</a>
+            <a href="#services" class="hover:text-red-500 transition-colors duration-300">Services</a>
+            <a href="#schedule" class="hover:text-red-500 transition-colors duration-300">Schedule</a>
+            <a href="#contact" class="hover:text-red-500 transition-colors duration-300">Contact</a>
+        </nav>
+        <button class="md:hidden p-2 text-gray-400 hover:text-white focus:outline-none">
+            <!-- Hamburger Icon (SVG) -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative w-full h-auto min-h-screen flex items-center justify-center p-4 md:p-12 overflow-hidden">
+        <!-- A imagem do usuário foi adicionada aqui como fundo, posicionada à direita e com opacidade reduzida -->
+        <div class="absolute inset-y-0 right-0 w-full md:w-1/2 -z-10">
+            <img src="https://i.postimg.cc/KzZN9BtK/Chat-GPT-Image-25-de-ago-de-2025-12-47-05.webp" alt="ZEN BODY personal trainer" class="w-full h-full object-cover opacity-40">
+        </div>
+
+        <div class="z-10 text-center md:text-left max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-white mb-4 drop-shadow-lg">
+                GET FIT. <br><i class="text-red-600">GET STRONG.</i></br> GET RESULTS.
+            </h1>
+            <p class="text-lg md:text-2xl font-light text-gray-50 mb-8 drop-shadow-md">
+                Stop making excuses and start making progress. Our certified personal trainers create customized workout plans that fit your schedule, goals, and fitness level.
+            </p>
+            <!-- Removido o arredondamento e mantido a cor do botão -->
+            <a href="#contact" class="inline-block px-8 py-4 bg-red-600 text-white font-bold shadow-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-105">
+                START YOUR TRANSFORMATION
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 px-6 md:px-12 bg-gray-900">
+        <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <!-- A imagem de espaço reservado foi substituída pela imagem do usuário -->
+            <div class="relative w-full h-96 md:h-full">
+                <img src="https://i.postimg.cc/KznKwHrQ/Chat-GPT-Image-23-de-ago-de-2025-19-33-48.png" alt="Trainer Alex Chen" class="w-full h-full object-cover rounded-xl shadow-lg">
+            </div>
+            <!-- About text -->
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">About ZEN BODY<br><i><span class="text-red-600">By Stella</span></i></h2>
+                <p class="text-gray-100 leading-relaxed mb-6">
+                    ZEN BODY is more than just a gym—it's a community dedicated to transforming lives through fitness. Our founder, Stella Cheni, a certified personal trainer with over 15 years of experience, built this academy on the principle that true strength comes from a balanced mind and body. We believe in creating sustainable habits, not quick fixes.
+                </p>
+                <p class="text-gray-100 leading-relaxed">
+                    Our tailored programs are designed to meet you wherever you are on your fitness journey. Whether you're a beginner or a seasoned athlete, we provide the expert guidance, motivation, and support you need to reach your goals.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 px-6 md:px-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12"><span class="text-red-600">Custom </span></i>Training Program</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer">
+                    <div class="flex justify-center mb-4 text-5xl"><img src="https://img.icons8.com/?size=100&id=kf0eWuEqt8kK&format=png&color=FA5252"></div>
+                    <h3 class="text-xl font-semibold text-center text-white mb-2">Personal Training</h3>
+                    <p class="text-gray-400 text-center">
+                        One-on-one sessions tailored to your specific fitness goals, from weight loss to muscle gain.
+                    </p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer">
+                    <div class="flex justify-center mb-4 text-5xl"><img src="https://img.icons8.com/?size=100&id=59059&format=png&color=FA5252"></div>
+                    <h3 class="text-xl font-semibold text-center text-white mb-2">Freedom</h3>
+                    <p class="text-gray-400 text-center">
+                        High-energy classes like HIIT, Yoga, and Spin, designed to build strength and community.
+                    </p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer">
+                    <div class="flex justify-center mb-4 text-4xl"><img src="https://img.icons8.com/?size=100&id=xbNlkEyqTRfT&format=png&color=FA5252"></div>
+                    <h3 class="text-xl font-semibold text-center text-white mb-2">Class Expert</h3>
+                    <p class="text-gray-400 text-center">
+                        Personalized nutrition guidance to fuel your body and complement your training regimen.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section id="success-stories" class="py-16 md:py-24 px-6 md:px-12 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Success <span class="text-red-600">Stories</span></h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.postimg.cc/gctM0WSL/Captura-de-tela-2025-08-25-163836.png" alt="Client Testimonial" class="w-16 h-16 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="text-lg font-semibold text-white">Jane Doe</p>
+                            <p class="text-sm text-gray-400">Marathon Runner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 italic">
+                        "ZEN BODY transformed my running performance. The personalized plan and expert coaching helped me shave minutes off my time and avoid injury. I couldn't have done it without them!"
+                    </p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.postimg.cc/hG0sRWQj/Captura-de-tela-2025-08-25-163933.png" alt="Client Testimonial" class="w-16 h-16 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="text-lg font-semibold text-white">John Smith</p>
+                            <p class="text-sm text-gray-400">Software Engineer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 italic">
+                        "I've never been a 'gym person' until I found ZEN BODY. The group classes are so much fun, and the trainers are incredibly supportive. I feel stronger and more confident than ever before."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Schedule Section -->
+    <section id="schedule" class="py-16 md:py-24 px-6 md:px-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Training <span class="text-red-600">Schedule</span></h2>
+            <div class="overflow-x-auto rounded-xl">
+                <table class="w-full text-left text-gray-400 bg-gray-800 rounded-xl overflow-hidden">
+                    <thead class="bg-gray-700 text-gray-300 uppercase">
+                        <tr>
+                            <th scope="col" class="py-3 px-6">Time</th>
+                            <th scope="col" class="py-3 px-6">Monday</th>
+                            <th scope="col" class="py-3 px-6">Tuesday</th>
+                            <th scope="col" class="py-3 px-6">Wednesday</th>
+                            <th scope="col" class="py-3 px-6">Thursday</th>
+                            <th scope="col" class="py-3 px-6">Friday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-700">
+                            <td class="py-4 px-6 font-medium text-white">7:00 - 8:00 AM</td>
+                            <td class="py-4 px-6">HIIT</td>
+                            <td class="py-4 px-6">Yoga Flow</td>
+                            <td class="py-4 px-6">Strength</td>
+                            <td class="py-4 px-6">Spin</td>
+                            <td class="py-4 px-6">HIIT</td>
+                        </tr>
+                        <tr class="bg-gray-800 border-b border-gray-700">
+                            <td class="py-4 px-6 font-medium text-white">12:00 - 1:00 PM</td>
+                            <td class="py-4 px-6">Yoga Flow</td>
+                            <td class="py-4 px-6">Strength</td>
+                            <td class="py-4 px-6">HIIT</td>
+                            <td class="py-4 px-6">Yoga Flow</td>
+                            <td class="py-4 px-6">Strength</td>
+                        </tr>
+                        <tr class="border-b border-gray-700">
+                            <td class="py-4 px-6 font-medium text-white">6:00 - 7:00 PM</td>
+                            <td class="py-4 px-6">Spin</td>
+                            <td class="py-4 px-6">HIIT</td>
+                            <td class="py-4 px-6">Yoga Flow</td>
+                            <td class="py-4 px-6">Strength</td>
+                            <td class="py-4 px-6">Spin</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery Section -->
+    <section class="py-16 md:py-24 px-6 md:px-12 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Our Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://i.postimg.cc/vmrcTGGr/Gemini-Generated-Image-92d54u92d54u92d5.webp" alt="Fitness image of a woman lifting weights" class="w-full h-auto object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+                <img src="https://i.postimg.cc/B6Jt1Rvd/Gemini-Generated-Image-dhtkjsdhtkjsdhtk.webp" alt="Fitness image of a person doing yoga" class="w-full h-auto object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+                <img src="https://i.postimg.cc/YCm4c1Vy/Gemini-Generated-Image-hfq1lihfq1lihfq1.webp" alt="Fitness image of a dance class" class="w-full h-auto object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+                <img src="https://i.postimg.cc/q7VNpNHB/Gemini-Generated-Image-rn2zdprn2zdprn2z.webp" alt="Fitness image of a personal trainer helping a client" class="w-full h-auto object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 px-6 md:px-12">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Start your <span class="text-red-600">transformation</span></h2>
+            <p class="text-lg text-gray-400 mb-8">
+                Ready to start your fitness journey? Fill out the form below and we'll be in touch!
+            </p>
+            <form id="contact-form" action="#" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-lg space-y-4">
+                <div>
+                    <input type="text" id="name" name="name" placeholder="Your Name" class="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 border-none focus:ring-2 focus:ring-red-600 focus:outline-none">
+                </div>
+                <div>
+                    <!-- Novo campo de entrada para o objetivo de fitness -->
+                    <input type="text" id="goal" name="goal" placeholder="Your Fitness Goal (e.g., lose weight, build muscle)" class="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 border-none focus:ring-2 focus:ring-red-600 focus:outline-none">
+                </div>
+                <!-- Botão para gerar a mensagem personalizada -->
+                <button type="button" id="generate-message-btn" class="w-full flex items-center justify-center px-6 py-3 bg-red-600 text-white font-bold rounded-lg shadow-lg hover:bg-red-700 transition-colors duration-300">
+                    <span id="button-text">✨ Generate Personalized Message ✨</span>
+                    <div id="loading-spinner" class="hidden loading-spinner ml-2"></div>
+                </button>
+                <div>
+                    <textarea id="message" name="message" rows="4" placeholder="Your Message" class="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 border-none focus:ring-2 focus:ring-red-600 focus:outline-none"></textarea>
+                </div>
+                <button type="submit" class="w-full px-6 py-3 bg-red-600 text-white font-bold rounded-lg shadow-lg hover:bg-red-700 transition-colors duration-300">
+                    SEND MESSAGE
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-gray-500 text-center py-8">
+        <div class="container mx-auto">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="hover:text-red-500 transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.505 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.77l-.44 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="#" class="hover:text-red-500 transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.316 2.378a.43.43 0 01.368 0c2.473.431 4.545 1.353 6.131 2.94a10.02 10.02 0 011.666 1.838c.683.79 1.258 1.632 1.69 2.502.44.87.75 1.776.924 2.7.174.925.26 1.84.26 2.748.01 1.948-.28 3.863-.87 5.71a10.033 10.033 0 01-1.745 3.328c-.85.94-1.802 1.76-2.85 2.45a9.96 9.96 0 01-3.13 1.59c-.99.27-2.02.41-3.08.41-.95 0-1.92-.12-2.88-.36a10.016 10.016 0 01-2.9-1.39c-.96-.65-1.84-1.46-2.65-2.43A10.03 10.03 0 012.3 16.89c-.58-1.84-.87-3.76-.86-5.7.01-1.94.25-3.83.74-5.65.49-1.82 1.25-3.53 2.29-5.1C5.6 4.3 6.8 3.3 8.16 2.66c1.36-.63 2.76-1.1 4.15-1.43zM8.3 12a3.7 3.7 0 100 7.4 3.7 3.7 0 000-7.4zm1.9-4.8c.6 0 1.1.5 1.1 1.1s-.5 1.1-1.1 1.1c-.6 0-1.1-.5-1.1-1.1s.5-1.1 1.1-1.1z" /></svg>
+                </a>
+                <a href="#" class="hover:text-red-500 transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.215 6.075c-.6.26-1.24.437-1.9.52a4.57 4.57 0 002.01-1.84c-.67.4-1.41.69-2.2.85a4.55 4.55 0 00-7.75 4.14 12.9 12.9 0 01-9.35-4.73c-.5.86-.78 1.83-.78 2.87 0 1.95 1 3.67 2.5 4.68-.6-.02-1.15-.17-1.64-.46v.06c0 2.76 1.97 5.06 4.58 5.58-.47.13-.97.19-1.48.19-.36 0-.7-.04-1.04-.1a4.56 4.56 0 004.26 3.16c-1.96 1.54-4.42 2.46-7.1 2.46-.46 0-.9-.02-1.34-.08a12.9 12.9 0 007.4 2.18c8.84 0 13.67-7.31 13.67-13.67 0-.21-.01-.42-.01-.63.94-.68 1.76-1.53 2.4-2.5Z" /></svg>
+                </a>
+            </div>
+            <p>&copy; 2024 ZEN BODY. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const generateButton = document.getElementById('generate-message-btn');
+        const nameInput = document.getElementById('name');
+        const goalInput = document.getElementById('goal');
+        const messageTextarea = document.getElementById('message');
+        const spinner = document.getElementById('loading-spinner');
+        const buttonText = document.getElementById('button-text');
+
+        generateButton.addEventListener('click', async () => {
+            const name = nameInput.value;
+            const goal = goalInput.value;
+
+            // Simple validation to ensure inputs are not empty
+            if (!name || !goal) {
+                messageTextarea.value = "Please enter your name and fitness goal to generate a message.";
+                return;
+            }
+
+            // Show loading state
+            buttonText.textContent = "Generating...";
+            spinner.classList.remove('hidden');
+            generateButton.disabled = true;
+
+            const prompt = `Act as a personal trainer for a fitness academy called ZEN BODY. Write a professional, friendly, and enthusiastic message for a prospective client to send to the academy. The message should express their interest in joining and briefly mention their fitness goal. The client's name is "${name}" and their goal is "${goal}". The message should be around 50-70 words and written in the first person. Do not start with a greeting like "Hello" or "Hi".`;
+
+            try {
+                const apiKey = ""; // Canvas will provide this key at runtime
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                const payload = {
+                    contents: [{
+                        role: "user",
+                        parts: [{
+                            text: prompt
+                        }]
+                    }],
+                };
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API call failed with status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                const generatedText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (generatedText) {
+                    messageTextarea.value = generatedText;
+                } else {
+                    messageTextarea.value = "Sorry, I couldn't generate a message at this time. Please try again.";
+                    console.error("No text received from the API.");
+                }
+            } catch (error) {
+                console.error('Error generating message:', error);
+                messageTextarea.value = "An error occurred while generating the message. Please try again later.";
+            } finally {
+                // Hide loading state
+                buttonText.textContent = "✨ Generate Personalized Message ✨";
+                spinner.classList.add('hidden');
+                generateButton.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
